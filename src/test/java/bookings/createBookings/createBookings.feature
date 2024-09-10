@@ -1,7 +1,7 @@
 Feature: Create Booking from the API
 
   Background:
-    * url 'https://restful-booker.herokuapp.com/'
+    * url base_url_booking
     * header Accept = 'application/json'
 
   @CreateBooking

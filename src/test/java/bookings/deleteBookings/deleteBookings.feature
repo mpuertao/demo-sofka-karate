@@ -1,7 +1,7 @@
 Feature: Delete Booking from the API Restful booker
 
   Background:
-    * url 'https://restful-booker.herokuapp.com'
+    * url base_url_booking
 
   Scenario: Validate delete booking by id
     Given def response_createbooking = call read('classpath:bookings/createBookings/createBookings.feature@CreateBooking')
@@ -14,3 +14,5 @@ Feature: Delete Booking from the API Restful booker
     And header Cookie = 'token='+ token
     When method DELETE
     Then status 201
+    And assert responseTime < 2000
+

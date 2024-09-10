@@ -1,20 +1,20 @@
 function fn() {
   var env = karate.env;
   karate.log('karate.env system property was:', env);
-  // if (!env) {
-  //   env = 'dev';
-  // }
+  if (!env) {
+    env = 'dev';
+  }
   var config = {
     env: env,
-    base_url: 'https://restful-booker.herokuapp.com'
+    base_url_booking: 'https://restful-booker.herokuapp.com',
+    base_url_users: '',
+    base_url_countries_soap: 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso'
   }
-  if (env == 'DEV') {
-    base_url = 'https://restful-booker.herokuapp.com'
+  if (env == 'dev'){
+    config.base_url_booking = 'https://restful-booker-DEV.herokuapp.com'
+    config.base_url_users = 'https://users-dev.com'
   } else if (env == 'QA') {
-    base_url = 'https://reqres.in'
+    config.base_url_booking = 'https://restful-booker-QA.herokuapp.com'
   }
-  karate.configure('connectTimeout', 5000);
-  karate.configure('readTimeout', 5000);
-  karate.configure('ssl', true)
   return config;
 }

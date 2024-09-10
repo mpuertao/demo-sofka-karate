@@ -1,15 +1,13 @@
-package users;
-
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-class UsersTest {
+class RunnerParallelTest {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:users")
+        Results results = Runner.path("classpath:bookings")
                 //.outputCucumberJson(true)
                 .parallel(Runtime.getRuntime().availableProcessors());
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
