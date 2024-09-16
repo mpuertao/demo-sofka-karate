@@ -1,7 +1,7 @@
 Feature: Delete Booking from the API Restful booker
 
   Background:
-    * url base_url_booking
+    * url url_base_bookings
 
   Scenario: Validate delete booking by id
     Given def response_createbooking = call read('classpath:bookings/createBookings/createBookings.feature@CreateBooking')

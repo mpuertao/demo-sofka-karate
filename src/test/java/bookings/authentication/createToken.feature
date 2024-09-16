@@ -3,7 +3,7 @@ Feature: create token for authentication for authorization of modificate
 
 
   Background:
-    * url 'https://restful-booker.herokuapp.com'
+    * url url_base_bookings
 
   @CreateToken
   Scenario: Create token successful

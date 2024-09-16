@@ -1,7 +1,7 @@
 Feature: Create Booking from the API
 
   Background:
-    * url base_url_booking
+    * url url_base_bookings
     * header Accept = 'application/json'
 
   @CreateBooking
