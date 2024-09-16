@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Definir la versión de Maven a utilizar en el pipeline
-        maven 'Maven 3.8.1' // Debes asegurarte de que esta versión de Maven está configurada en Jenkins
+        maven 'Maven 3.9.9' // Debes asegurarte de que esta versión de Maven está configurada en Jenkins
         jdk 'JDK 11' // Asegúrate de que la versión de JDK está configurada
     }
 
