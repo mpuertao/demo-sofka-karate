@@ -6,7 +6,7 @@ Feature: Create Booking from the API
     * def data_random = Java.type('utilities.DataRandom')
 
   @CreateBooking
-  Scenario: Create booking successful
+  Scenario: Create booking successful for API
     Given path 'booking'
     And def firstname = data_random.getFirstnameRandom()
     And def totalprice = data_random.getNumberRandom()
