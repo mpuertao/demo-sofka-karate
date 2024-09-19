@@ -8,6 +8,19 @@ pipeline {
     }
 
     stages {
+        stage('Deploy DEV') {
+            steps {
+                // Aquí puedes agregar pasos para desplegar tu aplicación en un servidor, contenedor, etc.
+                echo 'Deploying to the DEVELOPMENT server...'
+            }
+        }
+        stage('Deploy QA') {
+                    steps {
+                        // Aquí puedes agregar pasos para desplegar tu aplicación en un servidor, contenedor, etc.
+                        echo 'Deploying to the TESTING server...'
+                    }
+                }
+
         stage('Checkout') {
             steps {
                 // Realiza la descarga del código fuente desde GitHub u otro repositorio
@@ -30,11 +43,7 @@ pipeline {
         }
 
 
-        stage('Deploy') {
-            when {
-                // Despliega solo en la rama 'main' o 'master'
-                branch 'main'
-            }
+        stage('Deploy PDN') {
             steps {
                 // Aquí puedes agregar pasos para desplegar tu aplicación en un servidor, contenedor, etc.
                 echo 'Deploying to the production server...'

@@ -1,7 +1,7 @@
 {
-  "firstname": "Mao",
+  "firstname": "#(firstname)",
   "lastname": "Puerta",
-  "totalprice": 345,
+  "totalprice": "#(totalprice)",
   "depositpaid": true,
   "bookingdates": {
     "checkin": "2024-10-01",

@@ -1,9 +1,9 @@
 {
   "bookingid":"#number",
   "booking":{
-    "firstname":"Mao",
+    "firstname":"#string",
     "lastname":"Puerta",
-    "totalprice":345,
+    "totalprice":"#number",
     "depositpaid":true,
     "bookingdates":{
       "checkin":"2024-10-01",

@@ -3,10 +3,13 @@ Feature: Create Booking from the API
   Background:
     * url url_base_bookings
     * header Accept = 'application/json'
+    * def data_random = Java.type('utilities.DataRandom')
 
   @CreateBooking
   Scenario: Create booking successful
     Given path 'booking'
+    And def firstname = data_random.getFirstnameRandom()
+    And def totalprice = data_random.getNumberRandom()
     And def body_request = read('classpath:bookings/createBookings/BodyRequest.json')
     And request body_request
     When method POST
