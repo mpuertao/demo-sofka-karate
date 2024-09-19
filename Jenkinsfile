@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        // Definir la versión de Maven a utilizar en el pipeline CI
+        // Definir la versión de Maven a utilizar en el pipeline CI/CD
         maven 'Maven_3_9_9' // Debes asegurarte de que esta versión de Maven está configurada en Jenkins
         jdk 'JAVA_17' // Asegúrate de que la versión de JDK está configurada
     }
