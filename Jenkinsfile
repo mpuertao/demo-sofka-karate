@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Deploy DEV') {
             steps {
-                // Aquí puedes agregar pasos para desplegar tu aplicación en un servidor, contenedor, etc.
+                // Aquí puedes agregar pasos para desplegar tu aplicación en un servidor DEV.
                 echo 'Deploying to the DEVELOPMENT server...'
             }
         }
